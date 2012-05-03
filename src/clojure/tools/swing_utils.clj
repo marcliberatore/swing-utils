@@ -17,8 +17,7 @@
   (:import (java.awt.event ActionListener KeyAdapter)
            (javax.swing AbstractAction Action 
                         JMenu JMenuBar JMenuItem
-                        SwingUtilities))
-  (:use [clojure.contrib.def :only (defvar)]))
+                        SwingUtilities)))
 
 (defn add-action-listener
   "Adds an ActionLister to component. When the action fires, f will be
@@ -67,15 +66,15 @@
   [& body]
   `(do-swing* :now (fn [] ~@body)))
 
-(defvar action-translation-table
+(def action-translation-table
+  "Translation table for the make-action constructor."
   (atom {:name        Action/NAME
          :accelerator Action/ACCELERATOR_KEY
          :command-key Action/ACTION_COMMAND_KEY
          :long-desc   Action/LONG_DESCRIPTION
          :short-desc  Action/SHORT_DESCRIPTION
          :mnemonic    Action/MNEMONIC_KEY
-         :icon        Action/SMALL_ICON})
-  "Translation table for the make-action constructor.")
+         :icon        Action/SMALL_ICON}))
 
 (defn make-action
   "Create an Action proxy from the given action spec. The standard keys
@@ -94,9 +93,9 @@
       (.putValue action k v))
     action))
 
-(defvar menu-constructor-dispatch
-  (atom #{:action :handler :items})
-  "An atom containing the dispatch set for the add-menu-item method.")
+(def menu-constructor-dispatch
+  "An atom containing the dispatch set for the add-menu-item method."
+  (atom #{:action :handler :items}))
 
 (defmulti add-menu-item
   "Adds a menu item to the parent according to the item description.
