@@ -1,4 +1,4 @@
 (defproject swing-utils "0.1.0"
-  :description "FIXME: write description"
-  :dependencies [[org.clojure/clojure "1.4.0"]]
+  :description "Useful functions for interfacing Clojure to Swing"
+  :dependencies [[org.clojure/clojure "[1.3.0,)"]]
   :main clojure.tools.swing-utils)
