@@ -105,7 +105,7 @@
    - one single :action specifying a javax.swing.Action to be associated
      with the item.
    - a specification suitable for make-action
-   - a set of :name, :mnemonic and :items keys, specifying a submenu with
+   - a set of :name, :mnemonic and :items :listener keys, specifying a submenu with
      the given sequence of item entries.
    - an empty map specifying a separator."
   {:arglists '([parent item])}
@@ -125,10 +125,12 @@
 
 (defmethod add-menu-item :items
   add-menu-item-submenu
-  [parent {:keys [items mnemonic name]}]
+  [parent {:keys [items mnemonic name listener]}]
   (let [menu (JMenu. name)]
     (when mnemonic
       (.setMnemonic menu mnemonic))
+    (when listener
+      (.addMenuListener menu listener))
     (doseq [item items]
       (add-menu-item menu item))
     (.add parent menu)))
