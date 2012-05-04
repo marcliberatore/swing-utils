@@ -6,7 +6,7 @@ This project was forked from clojure-contrib in order to build against Clojure 1
 
 ## Usage
 
-Put `[swing-utils "0.1.0"]` into your dependencies of project.clj
+Put `[swing-utils "0.2.0"]` into your dependencies of project.clj
 
 ## License
 
