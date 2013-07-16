@@ -2,14 +2,18 @@
 
 Useful functions for interfacing Clojure to Swing.
 
-This project was forked from clojure-contrib in order to build against Clojure 1.3 or later.
-
 ## Usage
 
-Put `[swing-utils "0.2.0"]` into your dependencies of project.clj
+The latest stable release is 0.1.0.
+
+Add this :dependency to your Leiningen project.clj:
+
+["marcliberatore.swing-utils" "0.1.0"]
+
+Feedback and pull requests welcome!
 
 ## License
 
-Copyright (c) Stephen C. Gilardi and Meikel Brandmeyer. All rights reserved.
+Copyright (c) Stephen C. Gilardi, Meikel Brandmeyer, and Marc Liberatore.
 
 Distributed under the Eclipse Public License, the same as Clojure.
