@@ -6,14 +6,14 @@
 ;;  terms of this license.  You must not remove this notice, or any other,
 ;;  from this software.
 ;;
-;;  clojure.contrib.swing-utils
-;;
 ;;  Useful functions for interfacing Clojure to Swing
 ;;
 ;;  scgilardi (gmail)
 ;;  Created 31 May 2009
+;;
+;;  Forked from sgr/swing-utils by Marc Liberatore
 
-(ns clojure.tools.swing-utils
+(ns marcliberatore.swing-utils
   (:import (java.awt.event ActionListener KeyAdapter)
            (javax.swing AbstractAction Action 
                         JMenu JMenuBar JMenuItem
