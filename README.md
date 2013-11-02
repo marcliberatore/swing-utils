@@ -1,3 +1,11 @@
+# Important Note
+
+If you're writing a new application from scratch, you almost certainly would
+rather use [Seesaw], a friendly, well-document Clojure library for Swing 
+application development.
+
+[Seesaw]:https://github.com/daveray/seesaw
+
 # swing-utils
 
 Useful functions for interfacing Clojure to Swing.
